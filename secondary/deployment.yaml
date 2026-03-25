@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: betteruptimeacr.azurecr.io/betteruptime-frontend:v2
+          image: betterptimeacr.azurecr.io/uptime-dev-frontend:v2
           ports:
             - containerPort: 80
           resources:
@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: betteruptimeacr.azurecr.io/betteruptime-backend:v2
+          image: betterptimeacr.azurecr.io/betteruptime-backend:v2
           ports:
             - containerPort: 80
           resources:
