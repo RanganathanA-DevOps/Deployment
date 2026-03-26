@@ -31,6 +31,16 @@ spec:
               port: 80
             initialDelaySeconds: 30
             periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /
+              port: 80
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
       imagePullSecrets:
         - name: imagepullsecret
 ---
@@ -51,7 +61,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: betterptimeacr.azurecr.io/uptime-secondary-backend:uptime-secondary-26032026-v1.0.837f
+          image: betterptimeacr.azurecr.io/uptime-secondary-backend:uptime-secondary-26032026-v1.0.c04c
           ports:
             - containerPort: 80
           resources:
@@ -65,5 +75,17 @@ spec:
             httpGet:
               path: /api/health
               port: 80
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          livenessProbe:
+            httpGet:
+              path: /api/health
+              port: 80
+            initialDelaySeconds: 60
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
       imagePullSecrets:
         - name: imagepullsecret
