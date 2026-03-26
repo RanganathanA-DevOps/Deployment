@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend-deployment
-  namespace: better-uptime
+  namespace: better-uptime-secondary
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: betterptimeacr.azurecr.io/uptime-dev-frontend:v2
+          image: betterptimeacr.azurecr.io/uptime-secondary-frontend:uptime-secondary-25032026-v1.0.c23f
           ports:
             - containerPort: 80
           resources:
@@ -38,7 +38,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-deployment
-  namespace: better-uptime
+  namespace: better-uptime-secondary
 spec:
   replicas: 1
   selector:

@@ -1,8 +1,8 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: better-uptime-ingress
-  namespace: better-uptime
+  name: better-uptime-secondary-ingress
+  namespace: better-uptime-secondary
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/rewrite-target: /$2
@@ -20,7 +20,7 @@ metadata:
 
     # Session affinity (stickiness)
     nginx.ingress.kubernetes.io/affinity: "cookie"
-    nginx.ingress.kubernetes.io/session-cookie-name: "better-uptime.route"
+    nginx.ingress.kubernetes.io/session-cookie-name: "better-uptime-secondary.route"
     nginx.ingress.kubernetes.io/session-cookie-max-age: "432000"
     nginx.ingress.kubernetes.io/session-cookie-path: "/"
     nginx.ingress.kubernetes.io/session-cookie-samesite: "None"
