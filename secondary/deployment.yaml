@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: betterptimeacr.azurecr.io/uptime-secondary-backend:uptime-secondary-26032026-v1.0.cc2b
+          image: betterptimeacr.azurecr.io/uptime-secondary-backend:uptime-secondary-26032026-v1.0.ce7e
           ports:
             - containerPort: 80
           resources:
