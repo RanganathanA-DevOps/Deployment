@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: frontend-container
-          image: betterptimeacr.azurecr.io/uptime-primary-frontend:uptime-primary-26032026-v1.0.4d15
+          image: betterptimeacr.azurecr.io/uptime-primary-frontend:uptime-primary-26032026-v1.0.2537
           ports:
             - containerPort: 80
           resources:
