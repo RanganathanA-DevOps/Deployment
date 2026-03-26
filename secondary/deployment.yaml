@@ -51,7 +51,7 @@ spec:
     spec:
       containers:
         - name: backend-container
-          image: betterptimeacr.azurecr.io/uptime-secondary-backend:uptime-secondary-26032026-v1.0.3898
+          image: betterptimeacr.azurecr.io/uptime-secondary-backend:uptime-secondary-26032026-v1.0.cc2b
           ports:
             - containerPort: 80
           resources:
@@ -66,4 +66,4 @@ spec:
               path: /api/health
               port: 80
       imagePullSecrets:
-        - name: tg-imagepullsecret
+        - name: imagepullsecret
